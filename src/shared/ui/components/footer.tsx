@@ -20,6 +20,7 @@ export const Footer = () => {
                 label={t('companyName', { fallback: 'Company Name' })}
                 value="DCL Global LLC"
               />
+              <KeyValue label="Registration No. (UEN):" value="4253 LLC 2025" />
               <KeyValue
                 label={t('address', { fallback: 'Address' })}
                 value="Euro House, Richmond Hill Road, Kingstown, St. Vincent and the Grenadines"

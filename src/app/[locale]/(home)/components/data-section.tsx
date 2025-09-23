@@ -27,9 +27,11 @@ export const DataSection = () => {
     <div className="container">
       <section className="relative mt-[100px] flex px-[75px] pt-[130px] pb-[80px] max-[1095px]:flex-col max-md:mt-0 max-md:px-4 max-md:py-[60px] max-md:pb-[60px]">
         <div className="w-[300px] shrink-0 max-md:w-full">
-          <Text size="base" color="white" uppercase>
-            Why Businesses Choose Elvitix
-          </Text>
+          <div className="sticky top-3 max-[1090px]:relative max-[1090px]:top-0">
+            <Text size="base" color="white" uppercase>
+              Why Businesses Choose Elvitix
+            </Text>
+          </div>
         </div>
         <section className="flex flex-col gap-[85px]">
           <div className="flex flex-col gap-2">
