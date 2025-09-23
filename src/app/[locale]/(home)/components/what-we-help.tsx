@@ -45,9 +45,11 @@ export const WhatWeHelp = () => {
     <div className="container">
       <section className="relative mt-[100px] flex px-[75px] pt-[130px] pb-[80px] max-[1095px]:flex-col max-md:mt-0 max-md:px-4 max-md:pt-0 max-md:pb-[60px]">
         <div className="w-[300px] shrink-0 max-md:w-full">
-          <Text size="base" color="white" uppercase>
-            What We Help You Achieve
-          </Text>
+          <div className="sticky top-3 max-[1090px]:relative max-[1090px]:top-0">
+            <Text size="base" color="white" uppercase>
+              What We Help You Achieve
+            </Text>
+          </div>
         </div>
         <section className="flex flex-col gap-5">
           <div className="flex flex-col gap-4">
