@@ -1,5 +1,6 @@
 'use client';
 
+import { FadeIn } from '@/shared/ui/components/fade-in';
 import { BankIcon } from '@/shared/ui/icons/bank';
 import { ManufactoringIcon } from '@/shared/ui/icons/manufactoring';
 import { MedIcon } from '@/shared/ui/icons/med';
@@ -41,18 +42,20 @@ export const Industries = () => {
   return (
     <div className="container">
       <section className="flex flex-col gap-20 max-md:gap-10 max-md:pt-10">
-        <Title
-          weight={500}
-          className="overflow-hidden text-center text-[150px] leading-[149.544px] tracking-[-1.842px] text-[rgba(255,255,255,0.08)] max-md:text-[60px] max-md:leading-[58px]"
-          uppercase
-        >
-          Industries <br /> We Empower
-        </Title>
-        <div className="flex gap-2.5 max-md:flex-col max-md:gap-4">
+        <FadeIn animation="cinematicFadeInDown">
+          <Title
+            weight={500}
+            className="overflow-hidden text-center text-[150px] leading-[149.544px] tracking-[-1.842px] text-[rgba(255,255,255,0.08)] max-md:text-[60px] max-md:leading-[58px]"
+            uppercase
+          >
+            Industries <br /> We Empower
+          </Title>
+        </FadeIn>
+        <FadeIn className="flex gap-2.5 max-md:flex-col max-md:gap-4">
           {items.map((item, i) => (
             <Card key={i} {...item} />
           ))}
-        </div>
+        </FadeIn>
       </section>
     </div>
   );

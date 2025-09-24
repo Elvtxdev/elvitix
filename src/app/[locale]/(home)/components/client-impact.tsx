@@ -1,5 +1,6 @@
 'use client';
 
+import { FadeIn } from '@/shared/ui/components/fade-in';
 import { Text } from '@/shared/ui/kit/text';
 import { Title } from '@/shared/ui/kit/title';
 import Autoplay from 'embla-carousel-autoplay';
@@ -43,7 +44,7 @@ export const ClientImpact = () => {
     <section className="my-[100px] bg-[#1B1B1B] max-md:my-0">
       <div className="container">
         <section className="flex flex-col gap-[60px] px-[6vw] pt-[100px] pb-[80px] max-md:gap-[30px] max-md:px-4 max-md:py-[50px]">
-          <div className="flex flex-col text-center">
+          <FadeIn className="flex flex-col text-center">
             <Text size="base" color="white" uppercase>
               Client Impact
             </Text>
@@ -53,8 +54,8 @@ export const ClientImpact = () => {
             >
               Real stories. Real results.
             </Title>
-          </div>
-          <div className="relative flex flex-col items-center gap-[45px] max-md:gap-8">
+          </FadeIn>
+          <FadeIn className="relative flex flex-col items-center gap-[45px] max-md:gap-8">
             <QuoteIcon />
             <div className="embla w-full overflow-hidden" ref={emblaRef}>
               <div className="embla__container flex w-full gap-6">
@@ -86,7 +87,7 @@ export const ClientImpact = () => {
                 ))}
               </div>
             </div>
-          </div>
+          </FadeIn>
         </section>
       </div>
     </section>

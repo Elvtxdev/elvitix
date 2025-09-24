@@ -15,11 +15,13 @@ export const metadata: Metadata = {
     title: 'Elvitix | Data Engineering & AI Solutions for Modern Enterprises',
     description:
       'Elvitix helps businesses transform complex data into clarity and measurable outcomes. We deliver modern data architectures, real-time insights, AI readiness, and governance solutions that drive sustainable growth.',
+    images: ['https://elvitix.io/meta.jpg'],
   },
   twitter: {
     title: 'Elvitix | Data Engineering & AI Solutions for Modern Enterprises',
     description:
       'Elvitix helps businesses transform complex data into clarity and measurable outcomes. We deliver modern data architectures, real-time insights, AI readiness, and governance solutions that drive sustainable growth.',
+    images: ['https://elvitix.io/meta.jpg'],
   },
 };
 
