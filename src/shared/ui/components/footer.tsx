@@ -16,19 +16,16 @@ export const Footer = () => {
           <Image src="/logo.svg" alt="logo" width={303} height={80} />
           <section className="flex gap-10 max-md:flex-col max-md:gap-5">
             <ul className="flex flex-col gap-5">
-              <KeyValue
-                label={t('companyName', { fallback: 'Company Name' })}
-                value="DCL Global LLC"
-              />
+              <KeyValue value="DCL Global LLC" />
               <KeyValue label="Registration No. (UEN):" value="4253 LLC 2025" />
               <KeyValue
-                label={t('address', { fallback: 'Address' })}
+                label="Address:"
                 value="Euro House, Richmond Hill Road, Kingstown, St. Vincent and the Grenadines"
               />
             </ul>
             <ul className="flex flex-col gap-5">
               <KeyValue
-                label={t('email', { fallback: 'Email' })}
+                label="Email:"
                 value={
                   <Link href="mailto:info@elvitix.io" className="underline">
                     info@elvitix.io
@@ -36,7 +33,7 @@ export const Footer = () => {
                 }
               />
               <KeyValue
-                label={t('phoneNumber', { fallback: 'Phone Number' })}
+                label="Phone Number:"
                 value={
                   <Link href="tel:+442030024084" className="underline">
                     +442030024084
@@ -59,9 +56,9 @@ export const Footer = () => {
   );
 };
 
-const KeyValue = ({ label, value }: { label: string; value: ReactNode }) => (
+const KeyValue = ({ label, value }: { label?: string; value: ReactNode }) => (
   <li className="flex w-full max-w-[600px] flex-col gap-2">
-    <Text color="grey">{label}</Text>
+    {label && <Text color="grey">{label}</Text>}
     <Text size="2xl" color="white">
       {value}
     </Text>
