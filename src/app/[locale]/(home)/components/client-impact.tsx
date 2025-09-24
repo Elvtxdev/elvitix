@@ -1,10 +1,13 @@
 'use client';
 
 import { FadeIn } from '@/shared/ui/components/fade-in';
+import { FilledText } from '@/shared/ui/components/filled-text';
 import { Text } from '@/shared/ui/kit/text';
 import { Title } from '@/shared/ui/kit/title';
 import Autoplay from 'embla-carousel-autoplay';
 import useEmblaCarousel from 'embla-carousel-react';
+import { useScroll } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
 
 const reviews = [
   {
@@ -35,24 +38,42 @@ const reviews = [
 ];
 
 export const ClientImpact = () => {
+  const element = useRef<HTMLDivElement>(null);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const { scrollYProgress } = useScroll({
+    target: element,
+    offset: isMobile
+      ? ['start 0.9', 'start 0.5']
+      : ['start 0.7', 'start start'],
+  });
+
   const [emblaRef] = useEmblaCarousel(
     { loop: true, align: 'start', slidesToScroll: 1 },
     [Autoplay({ delay: 5000, stopOnInteraction: false })],
   );
 
   return (
-    <section className="my-[100px] bg-[#1B1B1B] max-md:my-0">
+    <section className="my-[100px] bg-[#1B1B1B] max-md:my-0" ref={element}>
       <div className="container">
         <section className="flex flex-col gap-[60px] px-[6vw] pt-[100px] pb-[80px] max-md:gap-[30px] max-md:px-4 max-md:py-[50px]">
           <FadeIn className="flex flex-col text-center">
             <Text size="base" color="white" uppercase>
               Client Impact
             </Text>
-            <Title
-              size="7xl"
-              className="bg-[linear-gradient(90deg,#FFF_50%,rgba(255,255,255,0.3)_50%)] bg-clip-text leading-[91px] text-transparent max-md:text-[30px] max-md:leading-[39px]"
-            >
-              Real stories. Real results.
+            <Title size="7xl">
+              <FilledText
+                text="Real stories. Real results."
+                className="justify-center text-[70px] leading-[91px] max-md:text-[30px] max-md:leading-[39px]"
+                progress={scrollYProgress}
+              />
             </Title>
           </FadeIn>
           <FadeIn className="relative flex flex-col items-center gap-[45px] max-md:gap-8">
