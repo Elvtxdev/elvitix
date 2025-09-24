@@ -51,7 +51,7 @@ export const Industries = () => {
             Industries <br /> We Empower
           </Title>
         </FadeIn>
-        <FadeIn className="flex gap-2.5 max-md:flex-col max-md:gap-4">
+        <FadeIn className="flex gap-2.5 max-[1090px]:flex-col max-md:gap-4">
           {items.map((item, i) => (
             <Card key={i} {...item} />
           ))}

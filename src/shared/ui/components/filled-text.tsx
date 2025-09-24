@@ -15,7 +15,7 @@ export const FilledText = ({
   const words = useMemo(() => text.split(' '), [text]);
 
   return (
-    <span className={cn('flex flex-wrap gap-x-4', className)}>
+    <span className={cn('flex flex-wrap gap-x-1', className)}>
       {words.map((word, wi) => {
         const start = wi / words.length;
         const end = start + 1 / words.length;
