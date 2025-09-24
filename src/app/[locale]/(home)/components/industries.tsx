@@ -23,7 +23,7 @@ const items = [
   },
   {
     icon: RetailIcon,
-    title: 'Retail & Consumer Goods',
+    title: 'Consumer Goods',
     text: 'Personalize customer journeys, reduce churn, optimize supply chains, and forecast demand with accuracy.',
   },
   {
@@ -33,7 +33,7 @@ const items = [
   },
   {
     icon: MediaIcon,
-    title: 'Media & Entertainment',
+    title: 'Media',
     text: 'Deliver targeted content, measure audience engagement, and streamline creative workflows.',
   },
 ];
