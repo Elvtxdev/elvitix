@@ -1,5 +1,6 @@
 'use client';
 
+import { FadeIn } from '@/shared/ui/components/fade-in';
 import { Header } from '@/shared/ui/components/header';
 import { Text } from '@/shared/ui/kit/text';
 import { Title } from '@/shared/ui/kit/title';
@@ -24,7 +25,7 @@ export const Hero = () => {
       />
       <div className="z-10 container flex flex-col gap-5">
         <Header />
-        <section className="z-10 flex justify-between gap-5 pt-[45px] pb-[100px] max-md:flex-col max-md:pt-0 max-md:pb-5">
+        <FadeIn className="z-10 flex justify-between gap-5 pt-[45px] pb-[100px] max-md:flex-col max-md:pt-0 max-md:pb-5">
           <Text size="lg" className="z-10 w-[600px] max-lg:w-full">
             At Elvitix, we specialize in unlocking the real value of data.
             Whether you’re looking to modernize your architecture, reduce
@@ -38,8 +39,8 @@ export const Hero = () => {
           >
             We make data work harder and AI work smarter for your business.
           </Text>
-        </section>
-        <div className="z-10 pb-[167px] max-md:pb-10">
+        </FadeIn>
+        <FadeIn className="z-10 pb-[167px] max-md:pb-10">
           <Title
             as="h1"
             className="text-[120px] leading-30 tracking-[-5px] max-md:text-[40px] max-md:leading-10 max-md:tracking-[-2px]"
@@ -47,7 +48,7 @@ export const Hero = () => {
           >
             Engineering Data That Works, AI That Lasts
           </Title>
-        </div>
+        </FadeIn>
       </div>
     </section>
   );
