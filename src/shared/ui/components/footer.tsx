@@ -16,7 +16,7 @@ export const Footer = () => {
           <Image src="/logo.svg" alt="logo" width={303} height={80} />
           <section className="flex gap-10 max-md:flex-col max-md:gap-5">
             <ul className="flex flex-col gap-5">
-              <KeyValue value="DCL Global LLC" />
+              <KeyValue label="Company Name:" value="DCL Global LLC" />
               <KeyValue label="Registration No. (UEN):" value="4253 LLC 2025" />
               <KeyValue
                 label="Address:"
